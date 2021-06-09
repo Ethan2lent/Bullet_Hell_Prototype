@@ -21,7 +21,9 @@ public class FireRate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   //Confirms if space is pressed and canshoot is true
-        if ((Input.GetKey(KeyCode.Space)) && (canShoot == true))
+  
+
+            if ((Input.GetKey(KeyCode.Z)) && (canShoot == true))
         {
             Shoot();
             canShoot = false;
@@ -35,10 +37,14 @@ public class FireRate : MonoBehaviour
         {
             canShoot = true;
         }
+
     }
 
     private void Shoot()
     {
-        Instantiate(projectileObject, transform.position, transform.rotation);
+        if (!transform.root.GetComponent<PlayerController>().isDead)
+        {
+            Instantiate(projectileObject, transform.position, transform.rotation);
+        }
     }
 }
