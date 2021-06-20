@@ -30,7 +30,7 @@ private void OnTriggerEnter(Collider other)
         Debug.Log("Player Dead");
         other.gameObject.GetComponent<PlayerController>().isDead = true;
     }
-    if (other.tag == "PlayerProjectile")
+    if (other.tag == "PlayerBullet2")
     {
         Destroy(gameObject);
     }

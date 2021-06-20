@@ -18,4 +18,12 @@ public class PlayerBullet : MonoBehaviour
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Obstacle")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

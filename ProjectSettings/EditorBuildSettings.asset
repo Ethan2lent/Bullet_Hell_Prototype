@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 3c01745ecd0f8754a847032fb82997dc
+  - enabled: 1
+    path: Assets/Scenes/Bullet Hell Prototype.unity
+    guid: 8190ad188ded3f540b888ad616199a5f
   m_configObjects: {}

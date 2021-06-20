@@ -31,6 +31,7 @@ public class FireRate : MonoBehaviour
         }
 
 
+
         timePassed += Time.deltaTime;
 
         if (timePassed >= refireRate)

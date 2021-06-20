@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
             Debug.Log("Player Dead");
             other.gameObject.GetComponent<PlayerController>().isDead = true;
         }
-        if (other.tag == "PlayerProjectile")
+        if (other.tag == "PlayerBullet1")
         {
             Destroy(gameObject);
         }
