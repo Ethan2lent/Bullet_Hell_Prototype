@@ -40,11 +40,7 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemy()
     {
 
-        float xPos = Random.Range((spawnBounds.size.x * -0.5f), (spawnBounds.size.x * 0.5f)) + spawnBounds.gameObject.transform.position.x;
-        float zPos = Random.Range((spawnBounds.size.z * -0.5f), (spawnBounds.size.z * 0.5f)) + spawnBounds.gameObject.transform.position.z;
 
-        Vector3 spawnPos = new Vector3(xPos, 0.0f, zPos);
-
-        Instantiate(enemyToSpawn, spawnPos, transform.rotation);
+        Instantiate(enemyToSpawn, transform.position, transform.rotation);
     }
 }
