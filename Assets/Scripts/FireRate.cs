@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class FireRate : MonoBehaviour
 {
-    public GameObject projectileObject;
+    public GameObject projectileObjectEnemy;
+    public GameObject projectileObjectObstacle;
 
-    public float refireRate;
+    public float refireRateEnemy;
+    public float refireRateObstacle;
     private float timePassed;
+    private bool gunMode;
     private bool canShoot;
 
     // Start is called before the first frame update
     void Start()
     {
+        gunMode = true;
         canShoot = true;
         timePassed = 0.0f;
 
@@ -21,31 +25,61 @@ public class FireRate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   //Confirms if space is pressed and canshoot is true
-  
+        if (Input.GetKeyDown(KeyCode.C))
+            {
+            gunMode = false;
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            gunMode = true;
+        }
 
+        if (gunMode == true)
+        { 
             if ((Input.GetKey(KeyCode.Z)) && (canShoot == true))
         {
             Shoot();
             canShoot = false;
             timePassed = 0.0f;
         }
+            timePassed += Time.deltaTime;
 
-
-
-        timePassed += Time.deltaTime;
-
-        if (timePassed >= refireRate)
-        {
-            canShoot = true;
+            if (timePassed >= refireRateEnemy)
+            {
+                canShoot = true;
+            }
         }
+
+        if (gunMode == false)
+        {
+            if ((Input.GetKey(KeyCode.Z)) && (canShoot == true))
+            {
+                Shoot();
+                canShoot = false;
+                timePassed = 0.0f;
+            }
+            timePassed += Time.deltaTime;
+
+            if (timePassed >= refireRateObstacle)
+            {
+                canShoot = true;
+            }
+        }
+
 
     }
 
     private void Shoot()
     {
-        if (!transform.root.GetComponent<PlayerController>().isDead)
+        if (transform.root.GetComponent<PlayerController>().lives > 0)
         {
-            Instantiate(projectileObject, transform.position, transform.rotation);
+            if (gunMode == true) {
+            Instantiate(projectileObjectEnemy, transform.position, transform.rotation);
+            }
+            if (gunMode == false)
+            {
+                Instantiate(projectileObjectObstacle, transform.position, transform.rotation);
+            }
         }
     }
 }

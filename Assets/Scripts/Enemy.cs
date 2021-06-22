@@ -25,9 +25,15 @@ public class Enemy : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log("Player Dead");
-            other.gameObject.GetComponent<PlayerController>().isDead = true;
+            other.GetComponent<PlayerController>().lives -= 1;
+            Destroy(gameObject);
         }
         if (other.tag == "PlayerBullet1")
+        {
+            Scoring.score += 1;
+            Destroy(gameObject);
+        }
+        if (other.tag == "KillZone")
         {
             Destroy(gameObject);
         }

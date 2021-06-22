@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bullet Hell Prototype.unity
     guid: 8190ad188ded3f540b888ad616199a5f
+  - enabled: 1
+    path: Assets/Scenes/Controls.unity
+    guid: 02e62bfa56e2a794c8b435327ebff201
+  - enabled: 1
+    path: Assets/Scenes/Restart.unity
+    guid: 3088f5892d0108a4495577790fab79a1
   m_configObjects: {}

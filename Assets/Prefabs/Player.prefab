@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  lives: 5
   isDead: 0
 --- !u!54 &-3658082103997045529
 Rigidbody:
@@ -223,7 +224,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5908144867133738529}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -318,7 +319,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6740781356942677291}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -454,6 +455,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8641544201900520097}
     m_Modifications:
+    - target: {fileID: 756895188392542929, guid: 239a3ff4a68a0dd44b709aad43aee484, type: 3}
+      propertyPath: projectileObjectEnemy
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 756895188392542929, guid: 239a3ff4a68a0dd44b709aad43aee484, type: 3}
+      propertyPath: refireRateEnemy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2826173615295361176, guid: 239a3ff4a68a0dd44b709aad43aee484, type: 3}
       propertyPath: m_Name
       value: Shooter Type 2

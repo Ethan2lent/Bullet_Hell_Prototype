@@ -152,7 +152,7 @@ public class ReadmeEditor : Editor {
 
 		EditorGUIUtility.AddCursorRect (position, MouseCursor.Link);
 
-		return GUI.Button (position, label, LinkStyle);
+		return GUI.Button(position, label, LinkStyle);
 	}
 }
 

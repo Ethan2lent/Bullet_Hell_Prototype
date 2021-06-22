@@ -10,6 +10,7 @@ TagManager:
   - PlayerBullet1
   - PlayerBullet2
   - Obstacle
+  - KillZone
   layers:
   - Default
   - TransparentFX

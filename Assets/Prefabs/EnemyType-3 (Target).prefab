@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 8253088236545170872}
   - component: {fileID: 6537129121772575530}
   m_Layer: 0
-  m_Name: EnemyType-3
+  m_Name: EnemyType-3 (Target)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,9 +269,9 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -6443607715208739797, guid: 41fb5cf34d4a8174794f7e91b6ea8b5b, type: 3}
-      propertyPath: enemyRefireRate
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: projectileObject
+      value: 
+      objectReference: {fileID: 2732921126426180582, guid: 94777f683481de74094b77280e0d795f, type: 3}
     - target: {fileID: 2826173615295361176, guid: 41fb5cf34d4a8174794f7e91b6ea8b5b, type: 3}
       propertyPath: m_Name
       value: EnemyShooter
@@ -339,9 +339,9 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -6443607715208739797, guid: 41fb5cf34d4a8174794f7e91b6ea8b5b, type: 3}
-      propertyPath: enemyRefireRate
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: projectileObject
+      value: 
+      objectReference: {fileID: 2732921126426180582, guid: 0745c782c11aaf74f9cef1b346410b1a, type: 3}
     - target: {fileID: 2826173615295361176, guid: 41fb5cf34d4a8174794f7e91b6ea8b5b, type: 3}
       propertyPath: m_Name
       value: EnemyShooter (1)

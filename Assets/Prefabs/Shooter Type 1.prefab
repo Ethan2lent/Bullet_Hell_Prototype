@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5937129099258387161}
-  - component: {fileID: 8161507599970703483}
+  - component: {fileID: 551566322170288676}
   m_Layer: 0
   m_Name: Shooter Type 1
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8161507599970703483
+--- !u!114 &551566322170288676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,8 +40,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2826173615295361176}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79251c3eef86ef94f8dfd7a13325cddf, type: 3}
+  m_Script: {fileID: 11500000, guid: b663ccbe42cfb8d46a9561b88fe33d9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileObject: {fileID: 2732921126426180582, guid: 011fed88cd71e3f46ac3bede2001542a, type: 3}
-  refireRate: 0.1
+  projectileObjectEnemy: {fileID: 2732921126426180582, guid: 011fed88cd71e3f46ac3bede2001542a, type: 3}
+  projectileObjectObstacle: {fileID: 0}
+  refireRateEnemy: 0.1
+  refireRateObstacle: 0

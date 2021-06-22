@@ -39,8 +39,6 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-
-
         Instantiate(enemyToSpawn, transform.position, transform.rotation);
     }
 }

@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed = 2;
+
+    public int lives;
 
     [HideInInspector]
     public bool isDead;
@@ -13,13 +16,13 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isDead = false;
+        lives = 5;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isDead)
+        if (lives != 0)
         {
             if (Input.GetKey(KeyCode.UpArrow))
             {
@@ -36,7 +39,12 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.RightArrow))
             {
                 transform.Translate(Vector3.right * speed * Time.deltaTime);
-            }
+            } 
+        }
+        else if (lives == 0)
+        {
+            Destroy(gameObject);
+            SceneManager.LoadScene(3);
         }
     }
 }

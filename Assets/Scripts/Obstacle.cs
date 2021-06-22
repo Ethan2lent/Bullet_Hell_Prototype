@@ -25,14 +25,20 @@ public class Obstacle : MonoBehaviour
 }
 private void OnTriggerEnter(Collider other)
 {
-    if (other.tag == "Player")
-    {
-        Debug.Log("Player Dead");
-        other.gameObject.GetComponent<PlayerController>().isDead = true;
-    }
+        if (other.tag == "Player")
+        {
+            Debug.Log("Player Dead");
+            other.GetComponent<PlayerController>().lives -= 1;
+            Destroy(gameObject);
+        }
     if (other.tag == "PlayerBullet2")
     {
-        Destroy(gameObject);
+                Scoring.score += 1;
+            Destroy(gameObject);
     }
-}
+        if (other.tag == "KillZone")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

@@ -43,5 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b663ccbe42cfb8d46a9561b88fe33d9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileObject: {fileID: 2732921126426180582, guid: 746bd95518b56b14da844af10a4c41d4, type: 3}
-  refireRate: 0.4
+  projectileObjectEnemy: {fileID: 2732921126426180582, guid: 011fed88cd71e3f46ac3bede2001542a, type: 3}
+  projectileObjectObstacle: {fileID: 2732921126426180582, guid: 746bd95518b56b14da844af10a4c41d4, type: 3}
+  refireRateEnemy: 0.1
+  refireRateObstacle: 0.3
