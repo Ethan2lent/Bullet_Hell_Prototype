@@ -14,6 +14,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void Start()
     {
+        //Option to target the player upon creation 
         if (targetPlayer == true) { 
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -26,7 +27,6 @@ public class EnemyBullet : MonoBehaviour
     }
 
 
-    // Update is called once per frame
     void Update()
     {   
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
@@ -35,12 +35,14 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Will kill itself and deduct a life from the player
         if (other.tag == "Player")
         {
             Debug.Log("Player Dead");
             other.GetComponent<PlayerController>().lives -= 1;
             Destroy(gameObject);
         }
+        //Will kill the object upon touch
         if (other.tag == "KillZone")
         {
             Destroy(gameObject);

@@ -22,17 +22,20 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Will kill itself and deduct a life from the player
         if (other.tag == "Player")
         {
             Debug.Log("Player Dead");
             other.GetComponent<PlayerController>().lives -= 1;
             Destroy(gameObject);
         }
+        // Will be destroyed and the player will be rewarded 
         if (other.tag == "PlayerBullet1")
         {
             Scoring.score += 1;
             Destroy(gameObject);
         }
+        //Will kill the object upon touch
         if (other.tag == "KillZone")
         {
             Destroy(gameObject);

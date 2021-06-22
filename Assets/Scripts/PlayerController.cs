@@ -13,15 +13,14 @@ public class PlayerController : MonoBehaviour
     public bool isDead;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         lives = 5;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //WIll stop the player and move to the restart scene if lives reaches 0
         if (lives != 0)
         {
             if (Input.GetKey(KeyCode.UpArrow))

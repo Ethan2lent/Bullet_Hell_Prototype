@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameGUI : MonoBehaviour
 {
+    // Handles the scene management for GUI
  public void PlayGame()
     {
         SceneManager.LoadScene(1);

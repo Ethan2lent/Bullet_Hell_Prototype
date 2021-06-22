@@ -13,7 +13,6 @@ public class FireRate : MonoBehaviour
     private bool gunMode;
     private bool canShoot;
 
-    // Start is called before the first frame update
     void Start()
     {
         gunMode = true;
@@ -24,7 +23,7 @@ public class FireRate : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   //Confirms if space is pressed and canshoot is true
+    {   //Confirms if space is pressed and canshoot is true as well as what type of bullet is being shot
         if (Input.GetKeyDown(KeyCode.C))
             {
             gunMode = false;
@@ -73,6 +72,7 @@ public class FireRate : MonoBehaviour
     {
         if (transform.root.GetComponent<PlayerController>().lives > 0)
         {
+            //Change modes based on if the bool is true or false
             if (gunMode == true) {
             Instantiate(projectileObjectEnemy, transform.position, transform.rotation);
             }

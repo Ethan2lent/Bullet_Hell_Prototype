@@ -23,7 +23,7 @@ public class EnemyManager : MonoBehaviour
     void Update()
     {
         timePassed += Time.deltaTime;
-        
+        //Will spawn an enemy after a certain amount of time and will disable all spawners after a set amount of time
         for (int i = 0; i < enemySpawners.Count; i++)
         {
                 if (timePassed > enemySpawnerOffsetTimers[i])
