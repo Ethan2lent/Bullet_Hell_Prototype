@@ -1,29 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour
 {
-    private Transform playerPosition;
+    private Transform stayPosition;
     private Vector3 target;
+    public float rotationSpeed;
 
-    public float bossMoveTimer;
     public int health;
     // Start is called before the first frame update
     void Start()
     {
- 
+        health = 2000;
     }
 
     // Update is called once per frame
     void Update()
     {
-        bossMoveTimer += Time.deltaTime;
-        transform.rotation = Quaternion(transform.position * rotationSpeed);
+        transform.Rotate(transform.up * rotationSpeed);
 
-        if (bossMoveTimer % 4 == 0) { 
-        playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
-        target = playerPosition.position - transform.position;
+        stayPosition = GameObject.FindGameObjectWithTag("Stop").transform;
+        target = stayPosition.position;
+        transform.position = Vector3.MoveTowards(transform.position, target, rotationSpeed * Time.deltaTime);
+
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(4);
         }
     }
+    
 }

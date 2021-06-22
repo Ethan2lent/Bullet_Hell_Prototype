@@ -25,5 +25,10 @@ public class PlayerBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (other.tag == "Boss")
+        {
+            other.GetComponent<Boss>().health -= 5;
+            Destroy(gameObject);
+        }
     }
 }

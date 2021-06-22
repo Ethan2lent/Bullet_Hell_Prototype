@@ -11,6 +11,8 @@ TagManager:
   - PlayerBullet2
   - Obstacle
   - KillZone
+  - Boss
+  - Stop
   layers:
   - Default
   - TransparentFX
