@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-                transform.Translate(Vector3.left * speed * Time.deltaTime);
+                    transform.Translate(Vector3.left * speed * Time.deltaTime);
             }
             if (Input.GetKey(KeyCode.RightArrow))
             {
