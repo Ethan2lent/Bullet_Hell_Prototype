@@ -52,9 +52,9 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(2.2f, transform.position.y, transform.position.z);
         }
-        else if (transform.position.x <= -9.5f)
+        else if (transform.position.x <= -9f)
         {
-            transform.position = new Vector3(-9.5f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-9f, transform.position.y, transform.position.z);
         }
 
         if (transform.position.z >= 5.1f)
