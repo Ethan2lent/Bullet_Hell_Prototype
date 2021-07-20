@@ -6,6 +6,11 @@ public class Obstacle : MonoBehaviour
 {
     public float speed;
     public float rotationSpeed;
+    public GameObject soundObject;
+
+    void Start()
+    {
+    }
 
     void Update()
     {
@@ -20,18 +25,24 @@ private void OnTriggerEnter(Collider other)
         {
             Debug.Log("Player Dead");
             other.GetComponent<PlayerController>().lives -= 1;
+            Spawn();
             Destroy(gameObject);
         }
         // Will be destroyed and the player will be rewarded 
     if (other.tag == "PlayerBullet2")
     {
                 Scoring.score += 1;
+            Spawn();
             Destroy(gameObject);
-    }
+        }
     //Will kill the object upon touch
         if (other.tag == "KillZone")
         {
             Destroy(gameObject);
         }
+    }
+    private void Spawn()
+    {
+        Instantiate(soundObject);
     }
 }

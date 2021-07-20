@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   rotationSpeed: 0
+  soundObject: {fileID: 6603224030284347658, guid: 6d7b286637270ea498910fbe4f0cd23d, type: 3}
 --- !u!64 &1558517442982378029
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -240,6 +240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  rotationSpeed: 0
+  soundObject: {fileID: 5272641708871590308, guid: 24eb6447907592642902b7cfe4d9a50d, type: 3}
 --- !u!54 &6537129121772575530
 Rigidbody:
   m_ObjectHideFlags: 0

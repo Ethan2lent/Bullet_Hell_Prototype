@@ -6,11 +6,11 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
     public float rotationSpeed;
+    public GameObject soundObject;
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -27,12 +27,14 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("Player Dead");
             other.GetComponent<PlayerController>().lives -= 1;
+            Spawn();
             Destroy(gameObject);
         }
         // Will be destroyed and the player will be rewarded 
         if (other.tag == "PlayerBullet1")
         {
             Scoring.score += 1;
+            Spawn();
             Destroy(gameObject);
         }
         //Will kill the object upon touch
@@ -40,5 +42,9 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    private void Spawn()
+    {
+        Instantiate(soundObject);
     }
 }
